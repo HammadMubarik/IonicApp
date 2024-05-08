@@ -1,0 +1,94 @@
+
+$clear-sky-color: #00aaff; 
+$sunny-color: #ffcc00; 
+$cloudy-color: #cccccc; 
+$rainy-color: #4a90e2; 
+$stormy-color: #666666; 
+$accent-color: #ff5722; 
+$text-color: #333333; 
+$button-padding: 12px 24px;
+$button-margin: 12px;
+$button-border-radius: 12px;
+$list-margin-top: 20px;
+$list-padding: 12px;
+$list-item-margin-bottom: 6px;
+$list-item-padding: 12px;
+$list-item-border-radius: 10px;
+
+
+.page-header {
+    background: linear-gradient(to right, $clear-sky-color, lighten($clear-sky-color, 20%));
+    padding: 16px;
+    color: $text-color;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem; 
+}
+
+.page-content {
+    padding: 16px;
+}
+
+
+ion-button {
+    --background: $accent-color; 
+    --color: $text-color; 
+    margin: $button-margin;
+    border-radius: $button-border-radius;
+    padding: $button-padding;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        --background: darken($accent-color, 10%); 
+    }
+}
+
+ion-list {
+    margin-top: $list-margin-top;
+    padding: $list-padding;
+    background-color: lighten($cloudy-color, 10%); 
+}
+
+ion-item {
+    --background: lighten($cloudy-color, 10%);
+    --color: $text-color;
+    border-radius: $list-item-border-radius;
+    margin-bottom: $list-item-margin-bottom;
+    padding: $list-item-padding;
+    font-weight: bold;
+
+    &:hover {
+        --background: lighten($cloudy-color, 20%); 
+        --color: darken($text-color, 20%);
+    }
+}
+
+
+ion-slides {
+    padding: 16px;
+    --background: linear-gradient(to right, $rainy-color, lighten($rainy-color, 20%));
+}
+
+ion-slide {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+ion-slide img {
+    max-width: 100%; 
+    max-height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+div h2, div h3 {
+    color: $clear-sky-color; 
+    margin-bottom: 12px; 
+}
+
+div p {
+    color: $text-color; 
+    line-height: 1.5; 
+}

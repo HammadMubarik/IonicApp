@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { ConnachtPageRoutingModule } from './connacht-routing.module';
-import { ConnachtPage } from './connacht.page';
+import { UlsterPageRoutingModule } from './ulster-routing.module';
+import { UlsterPage } from './ulster.page';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        ConnachtPageRoutingModule,
+        UlsterPageRoutingModule,
     ],
-    declarations: [ConnachtPage],
+    declarations: [UlsterPage],
 })
-export class ConnachtPageModule {}
+export class UlsterPageModule {}

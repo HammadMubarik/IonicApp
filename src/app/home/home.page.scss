@@ -1,27 +1,119 @@
-#container {
-  text-align: center;
+/* Define vibrant colors */
+$clear-sky-color: #00aaff; /* Bright blue for clear sky */
+$sunny-color: #ffcc00; /* Bright yellow for sunny weather */
+$cloudy-color: #cccccc; /* Light gray for cloudy weather */
+$rainy-color: #4a90e2; /* Medium blue for rainy weather */
+$stormy-color: #666666; /* Dark gray for stormy weather */
+$accent-color: #ff5722; /* Bright orange for accents */
+$text-color: #333333; /* Dark text color for readability */
+$hover-color: #ffa726; /* Bright orange for hover effects */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Define other variables */
+$list-padding: 12px; /* Define list padding */
+$list-margin-top: 20px; /* Define margin-top here */
+$list-item-padding: 12px;
+$list-item-margin-bottom: 6px;
+$list-item-border-radius: 10px;
+
+/* Define button styles */
+$button-padding: 12px 24px;
+$button-margin: 12px;
+$button-border-radius: 12px;
+
+/* Header and toolbar styling */
+ion-header, ion-toolbar {
+    --background: linear-gradient(to right, $clear-sky-color, $rainy-color);
+    --color: $text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Page title styling */
+ion-title {
+    --color: $text-color;
+    --background: lighten($rainy-color, 15%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 12px;
+    border-radius: 10px;
+    flex-grow: 1;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+/* Button styling */
+ion-button {
+    --background: linear-gradient(to right, $sunny-color, $accent-color);
+    --color: $text-color;
+    margin: $button-margin;
+    border-radius: $button-border-radius;
+    padding: $button-padding;
+    font-weight: bold;
 
-  color: #8c8c8c;
-
-  margin: 0;
+    &:hover {
+        --background: linear-gradient(to right, lighten($accent-color, 20%), $hover-color);
+        --color: #fff;
+    }
 }
 
-#container a {
-  text-decoration: none;
+/* Lists */
+ion-list {
+    margin-top: $list-margin-top;
+    padding: $list-padding;
+    background: linear-gradient(to right, $clear-sky-color, lighten($clear-sky-color, 40%));
+}
+
+/* List items */
+ion-item {
+    --background: lighten($cloudy-color, 20%);
+    --color: $text-color;
+    border-radius: $list-item-border-radius;
+    margin-bottom: $list-item-margin-bottom;
+    padding: $list-item-padding;
+    font-weight: bold;
+
+    &:hover {
+        --background: lighten($cloudy-color, 10%);
+        --color: darken($text-color, 20%);
+    }
+}
+
+/* Slideshow container styling */
+ion-slides {
+    padding: 16px;
+    --background: linear-gradient(to right, $rainy-color, lighten($rainy-color, 20%));
+}
+
+/* Individual slides */
+ion-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Images within slides */
+ion-slide img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* General content styles */
+div h2, div h3 {
+    color: $clear-sky-color;
+    margin-bottom: 12px;
+}
+
+div p {
+    color: $text-color;
+    line-height: 1.5;
+}
+
+/* Additional style for the date display */
+.date-display {
+    color: $text-color;
+    font-weight: bold;
+    margin-right: 20px;
 }
