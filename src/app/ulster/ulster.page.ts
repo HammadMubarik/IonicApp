@@ -18,18 +18,18 @@ export class UlsterPage {
 
     // Method to fetch weather data for a specific county
     getWeatherForCounty(county: string): void {
-        const apiKey = '75b1ebb0a3c7bf41046d2d8ee52c9232'; // Your API key
+        const apiKey = '75b1ebb0a3c7bf41046d2d8ee52c9232'; 
         const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
         const queryParams = {
-            q: `${county},IE`, // County and country code (IE for Ireland)
+            q: `${county},IE`, 
             appid: apiKey,
             units: 'metric',
         };
 
         this.http.get<any>(baseUrl, { params: queryParams }).subscribe(
             (response) => {
-                // Handle the response
+              
                 this.weatherData = response;
                 this.selectedCounty = county;
             },
@@ -40,7 +40,7 @@ export class UlsterPage {
         );
     }
 
-    // Method to convert Unix timestamp to human-readable time format
+
     formatTimestamp(timestamp: number): string {
         const date = new Date(timestamp * 1000);
         const options: Intl.DateTimeFormatOptions = {

@@ -10,7 +10,6 @@ export class LeinsterPage {
     // List of counties in Leinster
     counties: string[] = ['Carlow', 'Dublin', 'Kildare', 'Kilkenny', 'Laois', 'Longford', 'Louth', 'Meath', 'Offaly', 'Westmeath', 'Wexford', 'Wicklow'];
 
-    // Properties to hold the selected county and weather data
     selectedCounty: string | null = null;
     weatherData: any;
 
@@ -22,14 +21,14 @@ export class LeinsterPage {
         const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
         const queryParams = {
-            q: `${county},IE`, // County and country code (IE for Ireland)
+            q: `${county},IE`, 
             appid: apiKey,
             units: 'metric',
         };
 
         this.http.get<any>(baseUrl, { params: queryParams }).subscribe(
             (response) => {
-                // Handle the response
+               
                 this.weatherData = response;
                 this.selectedCounty = county;
             },
@@ -40,13 +39,13 @@ export class LeinsterPage {
         );
     }
 
-    // Method to convert Unix timestamp to human-readable time format
+    
     formatTimestamp(timestamp: number): string {
         const date = new Date(timestamp * 1000);
         const options: Intl.DateTimeFormatOptions = {
-            hour: 'numeric', // Format as numeric hour
-            minute: 'numeric', // Format as numeric minute
-            hour12: true, // Use 12-hour time
+            hour: 'numeric', 
+            minute: 'numeric', 
+            hour12: true, 
         };
         return date.toLocaleTimeString('en-IE', options);
     }

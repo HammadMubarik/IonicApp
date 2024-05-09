@@ -37,7 +37,7 @@ export class HomePage implements OnInit {
 
    
     getWeatherData(province: string): void {
-        const apiKey = 'your-api-key'; 
+        const apiKey = '75b1ebb0a3c7bf41046d2d8ee52c9232'; 
         const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
         const queryParams = {
             q: `${province},IE`,
@@ -48,7 +48,6 @@ export class HomePage implements OnInit {
         this.http.get<any>(baseUrl, { params: queryParams }).subscribe(
             (response: any) => {
                 console.log(`Weather data for ${province}:`, response);
-                // Handle the response as needed
             },
             (error: any) => {
                 console.error('Error fetching weather data:', error);
@@ -56,15 +55,15 @@ export class HomePage implements OnInit {
         );
     }
 
-    // Fetch weather data for each province
+    // this function fetches weather date for specific counties 
     fetchWeatherData(): void {
-        const provinces = ['Galway', 'Dublin', 'Cork', 'Belfast']; // List of provinces
+        const provinces = ['Galway', 'Dublin', 'Cork', 'Belfast']; 
         for (const province of provinces) {
             this.getWeatherData(province);
         }
     }
 
-    // Handle the "Log In" button click event
+    // this function promps the user to enter the name after they enter it, it adds a " hello " + their name to the top of the page
     promptForName(): void {
         const name = prompt('Please enter your name:');
         if (name) {
@@ -72,9 +71,5 @@ export class HomePage implements OnInit {
         }
     }
 
-    // Handle the "Create Account" button click event
-    handleCreateAccountClick(): void {
-        // Navigate to the create account page
-        this.router.navigate(['/create-account']);
-    }
+
 }

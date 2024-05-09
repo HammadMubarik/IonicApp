@@ -9,19 +9,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-    declarations: [AppComponent], // Declare the root component
+    declarations: [AppComponent], 
     imports: [
-        BrowserModule, // Browser support
-        IonicModule.forRoot(), // Initialize Ionic
-        AppRoutingModule, // Application routing configuration
-        HttpClientModule, // HTTP client for making API calls
-        // Add other modules you may need (e.g., FormsModule, ReactiveFormsModule)
+        BrowserModule,
+        IonicModule.forRoot(), 
+        AppRoutingModule, 
+        HttpClientModule, 
+        
     ],
     providers: [
-        // Use IonicRouteStrategy to customize route reuse behavior
+        
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-        // Add other providers as needed
+     
     ],
-    bootstrap: [AppComponent], // Bootstrap the root component
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

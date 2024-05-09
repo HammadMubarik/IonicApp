@@ -16,6 +16,7 @@ export class ConnachtPage {
 
     constructor(private http: HttpClient) {}
 
+    // function to pull weathre data for the specfic county using api
     getWeatherForCounty(county: string): void {
         const apiKey = '75b1ebb0a3c7bf41046d2d8ee52c9232'; 
         const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
@@ -39,7 +40,7 @@ export class ConnachtPage {
         );
     }
 
-   
+   // function to convert time into  readable human language
     formatTimestamp(timestamp: number): string {
         const date = new Date(timestamp * 1000);
         const options: Intl.DateTimeFormatOptions = {

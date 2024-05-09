@@ -1,60 +1,53 @@
-/* Define color palette */
-$clear-sky-color: #00aaff; /* Bright blue for clear sky */
-$sunny-color: #ffcc00; /* Bright yellow for sunny weather */
-$cloudy-color: #cccccc; /* Light gray for cloudy weather */
-$rainy-color: #4a90e2; /* Medium blue for rainy weather */
-$stormy-color: #666666; /* Dark gray for stormy weather */
-$accent-color: #ff5722; /* Bright orange for accents */
-$text-color: #333333; /* Dark text color for readability */
-
+$clear-sky-color: #00aaff; 
+$sunny-color: #ffcc00; 
+$cloudy-color: #cccccc; 
+$rainy-color: #4a90e2; 
+$stormy-color: #666666; 
+$accent-color: #ff5722; 
+$text-color: #333333; 
 $button-padding: 12px 24px;
 $button-margin: 12px;
 $button-border-radius: 12px;
-
 $list-margin-top: 20px;
 $list-padding: 12px;
 $list-item-margin-bottom: 6px;
 $list-item-padding: 12px;
 $list-item-border-radius: 10px;
 
-/* Page header styling */
 .page-header {
     background: linear-gradient(to right, $clear-sky-color, lighten($clear-sky-color, 20%));
     padding: 16px;
     color: $text-color;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem; /* Larger font size */
+    font-size: 1.5rem; 
 }
 
-/* Page content */
 .page-content {
     padding: 16px;
 }
 
-/* Button styling */
 ion-button {
-    --background: $accent-color; /* Bright orange for buttons */
-    --color: $text-color; /* Dark text color */
+    --background: $accent-color; 
+    --color: $text-color; 
     margin: $button-margin;
     border-radius: $button-border-radius;
     padding: $button-padding;
     font-weight: bold;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: background-color 0.3s ease; 
 
     &:hover {
-        --background: darken($accent-color, 10%); /* Darker orange on hover */
+        --background: darken($accent-color, 10%); 
     }
 }
 
-/* Lists */
 ion-list {
     margin-top: $list-margin-top;
     padding: $list-padding;
-    background-color: lighten($cloudy-color, 10%); /* Light background for lists */
+    background-color: lighten($cloudy-color, 10%); 
 }
 
-/* List items */
+
 ion-item {
     --background: lighten($cloudy-color, 10%);
     --color: $text-color;
@@ -64,39 +57,36 @@ ion-item {
     font-weight: bold;
 
     &:hover {
-        --background: lighten($cloudy-color, 20%); /* Lighter gray on hover */
-        --color: darken($text-color, 20%); /* Darker text color on hover */
+        --background: lighten($cloudy-color, 20%); 
+        --color: darken($text-color, 20%); 
     }
 }
 
-/* Slideshow container styling */
 ion-slides {
     padding: 16px;
     --background: linear-gradient(to right, $rainy-color, lighten($rainy-color, 20%));
 }
 
-/* Individual slides */
 ion-slide {
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* Images within slides */
+
 ion-slide img {
-    max-width: 100%; /* Maximum width of image */
-    max-height: 300px; /* Maximum height of image */
-    object-fit: cover; /* Fit image within bounds */
-    border-radius: 8px; /* Slightly rounded corners for images */
+    max-width: 100%; 
+    max-height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
-/* General content styles */
 div h2, div h3 {
-    color: $clear-sky-color; /* Bright blue for headings */
-    margin-bottom: 12px; /* Margin below headings */
+    color: $clear-sky-color; 
+    margin-bottom: 12px; 
 }
 
 div p {
-    color: $text-color; /* Dark text color */
-    line-height: 1.5; /* Comfortable line height */
+    color: $text-color; 
+    line-height: 1.5; 
 }
